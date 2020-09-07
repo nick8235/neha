@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>whiskypic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div style="margin-top: 20px;">
+<h2>Whisky Pic</h2>
+<ion-grid>
+  <ion-row>
+    <ion-col   *ngFor="let image of [1,2,3,4,5,6]">
+      <div class="img-wrapper" [style.background-image]="'url(assets/imgs/wine.png)'">
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</div>
+</ion-content>

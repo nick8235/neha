@@ -1,0 +1,28 @@
+.headingDiv{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    width: 100%;
+    color: brown;
+   // margin-top: 20px;
+}
+.ios, .md, .wp {
+	page-register {
+		 img{
+		    width: 200px;
+		    height: 200px;
+		    margin-left:40px;
+		    margin-right:55px;
+		}
+
+		p {
+			font-size: 0.9em;
+			color: #ea6153;
+		}
+		.error-register{
+			margin-left: 15px;
+		}
+	}
+	
+
+}

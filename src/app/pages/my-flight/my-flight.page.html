@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar class="headingDiv">
+    
+      <ion-title>MyFlight</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button ></ion-back-button>        
+      </ion-buttons>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="padding-left: 15px;padding-right: 15px;">
+    <ion-row>
+      <ion-col col-6>
+        <h1>My Flight</h1>
+        </ion-col>
+        <ion-col col-6 style="margin-top: 15px;">
+          
+            <ion-button size="small" shape="outline"  color="success" (click)="viewItem()">Add New Flight</ion-button>
+            
+         
+        </ion-col>
+    </ion-row>
+    </div>
+    <div style="margin-top: 15px;">
+       <ion-item *ngFor="let item of items">
+    <ion-list>
+      <ion-row>
+        <ion-col col-4>
+          {{item.title}}<br/>theWorld<br/>
+          <ion-button size="small" shape="round"   (click)="viewItem()">Play</ion-button>
+          <label><ion-button size="small" shape="outline"   (click)="viewItem()">view / Edit</ion-button></label>
+        </ion-col>
+        
+        
+        <ion-col col-8 style="margin-left: 80px;">
+          <img src="assets/imgs/wine.png" style="height: 50px;width: 50px;">
+          <!-- <img src={{item.img}} style="height: 50px;width: 50px;" > -->
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-item>
+  </div>
+<!-- <ion-list>
+<ion-item *ngFor="let item of items">
+   
+    <h2 style="font-size: 1.2em;margin-top: 50px;">{{item.title}}<br>the World</h2>
+    
+     <button ion-button clear item-right (click)="viewItem(item.data)">View</button> 
+</ion-item>
+
+</ion-list> -->
+<!-- <div    *ngFor="let item of items" >
+  <ion-grid>
+    <ion-card>
+      <ion-row class="flex-col" >
+        <ion-col col-4>
+          <div text-center>
+            Around <br>the World
+          </div>
+        </ion-col>
+        <ion-col col-8 text-left>
+          <label>{{item.img}}</label>
+        </ion-col>
+        
+      </ion-row>
+    </ion-card>
+  </ion-grid>
+  </div> -->
+</ion-content>

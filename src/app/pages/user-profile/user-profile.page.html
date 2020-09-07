@@ -1,0 +1,88 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>userProfile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="outer">
+      <div class="inner">
+       <input class="inputfile" type="file" name="pic" accept="image/*">
+
+      <label><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg></label>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 10px;padding-right: 5px;padding-left:5px">
+<!-- <ion-grid>
+  <ion-row>
+    <ion-col col-4></ion-col>
+    <ion-col col-4></ion-col>
+    <ion-col col-4></ion-col>
+
+  </ion-row>
+</ion-grid> -->
+    <ion-segment [(ngModel)]="sections.selectedSection" color="primary">
+      <ion-segment-button style="background-color: #4c8dff;margin-left: 3px;"  value="{{sections.first}}">
+          43Tasting
+      </ion-segment-button>
+      <ion-segment-button style="background-color: #4c8dff;margin-left: 3px;" value="{{sections.second}}">
+        43Tasting
+      </ion-segment-button>
+      <ion-segment-button style="background-color: #4c8dff;margin-left: 3px;" value="{{sections.second}}">
+        43Tasting
+    </ion-segment-button>
+    </ion-segment>
+    <div>
+      <h2>About me</h2><br/>
+      <p>His issue is being locked to prevent comments that are not relevant to the original issue.
+         If this is still an issue with the latest version of Ionic, 
+        please create a new issue and ensure the template is fully filled out.</p><br/>
+        <h2>Dream of Choice</h2>
+
+      </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3 >
+          <img src="assets/imgs/wine.png"style="height: 130px; width: 130px;">
+        </ion-col>
+        <ion-col col-9>
+          His issue is being locked to prevent comments that are not relevant to the original issue.
+         If this is still an issue with the latest version of Ionic, 
+        please create a new issue and ensure the template is fully filled out.
+       
+       </ion-col>
+      </ion-row>
+    </ion-grid>
+<ion-grid>
+  <ion-row>
+    <ion-col col-6>
+<h1>Tasting</h1>
+    </ion-col>
+    <ion-col col-6>
+      <ion-button size="small" shape="outline" style="text-align: center;
+        margin-top: 15px;"   (click)="filter()">Filter</ion-button>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+    <!-- <IonSegment>
+      <IonSegmentButton value="camera">
+        <IonIcon icon={camera} />
+      </IonSegmentButton>
+      <IonSegmentButton value="bookmark">
+        <IonIcon icon={bookmark} />
+      </IonSegmentButton>
+    </IonSegment> -->
+  </div>
+  <!-- <div style="background:#0E4C48;padding:20px" text-center>
+    <div class="profile-photo" (click)="choosePopup()" style="background:white;height:150px;width:150px;margin-left: auto; margin-right: auto"
+      text-center>
+      <img src="assets/imgs/person.png" style="margin:auto;top:0;bottom:0;left:0;right:0;height:150px;width:150px" />
+      <button small  ion-button (click)="editProfile()">Edit Profile</button>
+
+    </div>
+  <button small  ion-button (click)="editProfile()">Edit Profile</button> 
+  </div> -->
+</ion-content>

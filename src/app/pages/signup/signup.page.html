@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar class="headingDiv">
+      <ion-title>Register</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button ></ion-back-button>        
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <ion-item>
+      <ion-label position="floating"> UserName </ion-label>
+      <ion-input type="text" [(ngModel)]="userId"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Fullname </ion-label>
+      <ion-input type="text" [(ngModel)]="firstName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> LastName</ion-label>
+      <ion-input type="text" [(ngModel)]="lastName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Email </ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Password </ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating"> City </ion-label>
+      <ion-input type="text" [(ngModel)]="city"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"> Country </ion-label>
+      <ion-input type="text" [(ngModel)]="country"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Birthday</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="dob"></ion-datetime>
+    </ion-item>
+    
+  </div>
+
+  <div padding>
+    <ion-button expand="block" shape="round" (click)="addRegister()">Submit</ion-button>
+  </div>
+
+</ion-content>
+
+
+
