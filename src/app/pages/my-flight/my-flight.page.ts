@@ -11,7 +11,7 @@ export class MyFlightPage implements OnInit {
   img:any
   constructor( private  router:Router) {
     this.items = [
-    {"img":"assets/imgs/whisky.jpg,assets/imgs/whisky.jpg,assets/imgs/whisky.jpg","title":"Around"},
+    {"img":"assets/imgs/whisky.png,assets/imgs/whisky.png,assets/imgs/whisky.png","title":"Around"},
     {"title":"Around"},
     {"title":"Around"},
     {"title":"Around"},

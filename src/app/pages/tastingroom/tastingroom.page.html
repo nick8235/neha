@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tastingroom</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 5px">
+    <ion-row>
+      <ion-col col-3 style=" text-align: center;">
+        <img src="assets/imgs/person.png" />
+      </ion-col>
+      <ion-col col-6 style="float: right">
+        Dirty Harry Dream of choice The Dalmore 40 year old
+      </ion-col>
+      <ion-col col-3>
+        <ion-button size="small" shape="outline" color="dark"
+          >43 Tasting</ion-button
+        ><br />
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+
+        <ion-icon name="star-half"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </div>
+  <div>
+  
+    <ion-card>
+      <iframe  width="100%" height="315"  frameborder="0" allowfullscreen></iframe>
+    
+    </ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-badge color="warning" mode="ios">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+
+
+              <ion-icon name="star"></ion-icon>
+
+              4.5
+            </ion-badge>
+          </ion-col>
+          <ion-col col-6 style="text-align: right;">
+            <ion-button size="small" shape="outline" (click)="addToFlight()" color="dark" >Add flight<ion-icon name="wine"></ion-icon></ion-button>
+            <ion-content>
+              <ion-item [hidden]='hideList'>
+                  <ion-label>Choose Country</ion-label>
+                  <ion-select placeholder="Country" #countryList (ionChange)='addToFlight()'>
+                <ion-select-option value="1">India</ion-select-option>
+                <ion-select-option value="2">Japan</ion-select-option>
+                <ion-select-option value="3">Sri Lanka</ion-select-option>
+                <ion-select-option value="4">Qatar</ion-select-option>
+                  </ion-select>
+              </ion-item>
+             <!-- <ion-button ion-button block (click)='displayCountry()'>Pop Out Select</ion-button> -->
+             </ion-content>
+          </ion-col>
+         
+        </ion-row>
+    
+      </ion-grid>
+    
+    </div>
+</ion-content>

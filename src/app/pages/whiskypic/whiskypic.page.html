@@ -5,15 +5,27 @@
 </ion-header>
 
 <ion-content>
-<div style="margin-top: 20px;">
-<h2>Whisky Pic</h2>
-<ion-grid>
-  <ion-row>
-    <ion-col   *ngFor="let image of [1,2,3,4,5,6]">
-      <div class="img-wrapper" [style.background-image]="'url(assets/imgs/wine.png)'">
-      </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+<div style="margin-top: 10px;" >
+<h2 class="text">Whisky Pic</h2>
 </div>
-</ion-content>
+<div class=flex-col>
+  <ion-grid>
+    <ion-col col="3"  *ngFor="let data of datas">
+      <img [src]="data.image"/>
+    </ion-col>
+  </ion-grid>
+
+</div>
+
+  <div class="text">
+  <h2>Comment</h2><br/>
+   <p>Love the whisky its goes down easily<br/>
+  
+   Ujwal shejwal<br/>
+   It's Ok I prefer the 21 year old</p><br/>
+   <button ion-button  clear>
+    view all comment
+  </button>
+</div>
+   <!-- <ion-button button-clear >View all comment</ion-button> -->
+  </ion-content>

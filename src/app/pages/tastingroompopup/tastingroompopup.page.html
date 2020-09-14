@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tastingroompopup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Country</ion-label>
+    <ion-select [(ngModel)] = "countrySelected">
+      <ion-select-option *ngFor = "let c of countryData" value="{c.id}">{{c.name}}</ion-select-option>>
+    </ion-select>
+</ion-item>
+</ion-content>

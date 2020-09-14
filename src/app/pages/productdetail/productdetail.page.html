@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>productdetail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style="margin-top: 10px;">
+  <ion-row>
+  <ion-col col-3>
+    <img src="assets/imgs/bottle.png"/>
+  </ion-col>
+  <ion-col col-9>
+    <h1>Laphourning<br/>18 Year Old</h1>
+    <p>Islay Single Malt Scotch Whisky-48% ABY</p>
+    <p>His issue is being locked to prevent comments that are not relevant to the original issue.
+      If this is still an issue with the latest version of Ionic, 
+     please create a new issue and ensure the template is fully filled out.</p>
+  </ion-col>
+  </ion-row>
+</div>
+<div style="padding-right: 5px;padding-left:5px">
+  
+<ion-row>
+  <ion-col col-6 >
+    
+    
+    <ion-button size="block" shape="outline"  color="dark" >Tasting</ion-button>
+  </ion-col>
+  <ion-col col-6 >
+    <ion-button size="block" shape="outline"  (click)="filter()" color="dark" >Filter</ion-button></ion-col>
+
+</ion-row>
+    <h1>Tasting</h1>
+  <ion-row>
+    <ion-col col-6>
+      <ion-icon slot="start" name="play"></ion-icon>
+      <!-- <img src="assets/imgs/arrow_left.png" style="height: 20px ;width: 20px; text-align: center;"/> -->
+      <ion-card>
+        <iframe  width="100%" height="215"  frameborder="0" allowfullscreen></iframe>
+        
+       
+    </ion-card>
+  </ion-col>
+    <ion-col col-6>
+      <ion-card>
+ <iframe  width="100%" height="215"  frameborder="0" allowfullscreen></iframe>
+
+      </ion-card>
+    </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 >
+        
+        <ion-badge color="warning" mode="ios">
+          <ion-icon name="star"></ion-icon>
+         
+        </ion-badge><br/>
+        <ion-button size="small" shape="outline"  color="dark" >Add Flight<ion-icon name="wine"></ion-icon></ion-button>
+      </ion-col>
+      <ion-col col-6 >
+        <ion-badge color="warning" mode="ios">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+
+         
+        </ion-badge><br/>
+        <ion-button size="small" shape="outline"  color="dark" >Add flight<ion-icon name="wine"></ion-icon></ion-button></ion-col>
+    
+    </ion-row>
+    
+</div>
+
+
+</ion-content>

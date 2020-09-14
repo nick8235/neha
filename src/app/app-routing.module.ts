@@ -47,6 +47,26 @@ const routes: Routes = [
     path: 'productpage',
     loadChildren: () => import('./pages/productpage/productpage.module').then( m => m.ProductpagePageModule)
   },
+  {
+    path: 'productdetail',
+    loadChildren: () => import('./pages/productdetail/productdetail.module').then( m => m.ProductdetailPageModule)
+  },
+  {
+    path: 'user',
+    loadChildren: () => import('./pages/user/user.module').then( m => m.UserPageModule)
+  },
+  {
+    path: 'purchase',
+    loadChildren: () => import('./pages/purchase/purchase.module').then( m => m.PurchasePageModule)
+  },
+  {
+    path: 'tastingroom',
+    loadChildren: () => import('./pages/tastingroom/tastingroom.module').then( m => m.TastingroomPageModule)
+  },
+  {
+    path: 'tastingroompopup',
+    loadChildren: () => import('./pages/tastingroompopup/tastingroompopup.module').then( m => m.TastingroompopupPageModule)
+  },
 ];
 
 @NgModule({

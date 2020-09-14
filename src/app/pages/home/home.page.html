@@ -1,54 +1,66 @@
 <ion-header>
   <ion-toolbar class="headingDiv">
-    
-      <ion-title>Home</ion-title>
-      <ion-buttons slot="start">
-        <ion-back-button ></ion-back-button>        
-      </ion-buttons>
-      </ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-buttons right>
+	      <button ion-button color="dark" [navPush]="pushCart" >
+	        <ion-icon name="cart" class="cart-icon"></ion-icon>
+	        <ion-badge *ngIf="badge">{{cartItem}}</ion-badge>
+	      </button>
+	    </ion-buttons> -->
+  </ion-toolbar>
 </ion-header>
 
-<ion-content style="background-color: #efefef;">
-  <div style="margin-top:15px;padding-left: 15px;padding-right: 15px;">
+<ion-content style="background-color: #efefef">
+  <div style="margin-top: 15px; padding-left: 15px; padding-right: 15px">
     <ion-row>
       <ion-col>
-       <h1>My Flight</h1> 
-        </ion-col>
-        
-    </ion-row>
-    <div style="margin-top: 20px;">
-      <ion-row>
-        <ion-col col-6>
-          <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()" style="border-radius:20px"></ion-searchbar>
-          
-        </ion-col>
-         
-        <ion-col col-6>
-          
-         <ion-select (ionChange)="changeCategory()" [(ngModel)]="category" name="category">Filter
-            <ion-select-option  value="wine"> Wine</ion-select-option>
-            <ion-select-option  value="wine"> Wine</ion-select-option>
-            <ion-select-option  value="wine"> Wine</ion-select-option>
-            <ion-select-option  value="wine"> Wine</ion-select-option>
-            <ion-select-option  value="wine"> Wine</ion-select-option>
-          </ion-select>
-          
-       
-                
-    
-           
-        </ion-col> 
-      </ion-row>
-
-    </div>
-    
-  </div>
-  <ion-grid>
-    <ion-row>
-      <ion-col sizeLg="4" sizeMd="4" sizeXs="6" *ngFor="let image of [1,2,3,4,5,6]">
-        <div class="img-wrapper" [style.background-image]="'url(assets/imgs/wine.png)'">
-        </div>
+        <h1>My Flight</h1>
       </ion-col>
     </ion-row>
-  </ion-grid>
+    <div style="margin-top: 20px">
+      <ion-row>
+        <ion-col col-6>
+          <ion-searchbar
+            [(ngModel)]="searchTerm"
+            (ionInput)="setFilteredItems()"
+            style="border-radius: 20px"
+          ></ion-searchbar>
+        </ion-col>
+
+        <ion-col col-6>
+          <ion-select
+            (ionChange)="changeCategory()"
+            [(ngModel)]="category"
+            name="category"
+            >Filter
+            <ion-select-option value="wine"> Wine</ion-select-option>
+            <ion-select-option value="wine"> Wine</ion-select-option>
+            <ion-select-option value="wine"> Wine</ion-select-option>
+            <ion-select-option value="wine"> Wine</ion-select-option>
+            <ion-select-option value="wine"> Wine</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+
+  <ion-row class="row">
+    <ion-col size="6" *ngFor="let item of items">
+   <div>
+   <ion-card class="ion-no-padding ion-no-margin">
+     <img [src]="item?.ImgUrl" />
+  
+       <p class="productTitle">{{item?.name}}</p>
+       <div class="box">
+           <p>{{item?.description}}</p>
+       </div>
+   </ion-card>
+   </div>
+   </ion-col>
+   
+   
+   </ion-row>
 </ion-content>

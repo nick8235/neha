@@ -10,7 +10,11 @@ import { AuthServiceService } from 'src/app/services/auth-service.service';
 export class ProductpagePage implements OnInit {
   items:any;
    page=0;
+   data:any;
+   serviceKeyword:any;
   constructor(private service:AuthServiceService) {
+
+  
     this.items = [
       { image:'assets/imgs/person.png', 
     title:" Harry 12 year old highland single mait scotch", 
@@ -32,7 +36,7 @@ title:" Harry 12 year old highland single mait scotch",
 title:" Harry 12 year old highland single mait scotch", 
 },
 ]
-   }
+} 
   
   ngOnInit() {
   }
@@ -45,5 +49,10 @@ title:" Harry 12 year old highland single mait scotch",
         
         }
       )};  
+      filter(){
+        
+      }
+      getProdForSearch($event){
 
+      }
 }

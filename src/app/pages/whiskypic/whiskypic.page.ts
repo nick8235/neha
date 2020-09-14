@@ -6,8 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./whiskypic.page.scss'],
 })
 export class WhiskypicPage implements OnInit {
+datas:any;
+  constructor() {
+    this.datas=[
+      {image:"assets/imgs/pic.png"},
+      {image:"assets/imgs/pic.png"},
+      {image:"assets/imgs/pic.png"},
+       {image:"assets/imgs/pic.png"},
+       {image:"assets/imgs/pic.png"},
+       {image:"assets/imgs/pic.png"},
+       {image:"assets/imgs/pic.png"},
+        {image:"assets/imgs/pic.png"},
+        {image:"assets/imgs/pic.png"},
+        {image:"assets/imgs/pic.png"},
+        {image:"assets/imgs/pic.png"},
+         {image:"assets/imgs/pic.png"},
+         
 
-  constructor() { }
+    ]
+   }
 
   ngOnInit() {
   }

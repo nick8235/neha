@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import{ProductService} from'../../services/products.service';
+import { ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-home',
@@ -9,20 +13,76 @@ import { Router } from '@angular/router';
 export class HomePage {
   searchTerm:any;
   category:any;
-
-  constructor() {}
-
-
-
+  productDetail;
+  productId;
+  items:any;
+  constructor(private products:ProductService,private route: ActivatedRoute) {
+    // this.pushCart = CartPage; 
+    
+    
+    this.items = [
+      {
+        ProductId:1,
+        name: "Product",
+        ImgUrl: "assets/imgs/1-1.jfif",
+        flavour:"flavour",
+        description:"Harry 12 year old highland single mait scotch"
+        
+      }, 
+      {
+        ProductId:2,
+        name: "Product",
+        ImgUrl: "assets/imgs/1-1.jfif",
+        flavour:"flavour",
+        description:"Harry 12 year old highland single mait scotch"
+        
+        
+      }, 
+      {
+        ProductId:3,
+        name: "Product",
+        ImgUrl: "assets/imgs/1-1.jfif",
+        flavour:"flavour",
+        description:"Harry 12 year old highland single mait scotch"
+        
+        
+      }, 
+      {
+        ProductId:4,
+        name: "Product",
+        ImgUrl: "assets/imgs/1-1.jfif",
+        flavour:"flavour",
+        description:"Harry 12 year old highland single mait scotch"
+        
+        
+      }, 
+      {
+        ProductId:5,
+        name: "Product",
+        ImgUrl: "assets/imgs/1-1.jfif",
+        flavour:"flavour",
+        description:"Harry 12 year old highland single mait scotch"
+        
+        
+      },
+      {
+        ProductId:6,
+        name: "Product",
+        ImgUrl: "assets/imgs/1-1.jfif",
+        flavour:"flavour",
+        description:"Harry 12 year old highland single mait scotch"
+        
+        
+      },  
+      ];
+     
+  }
+ 
+ 
 
   ngOnInit() {
-    // this.setFilteredItems("");
+    //this.items = this.products.getAllProducts();
 
-    // this.searchControl.valueChanges
-    //   .pipe(debounceTime(700))
-    //   .subscribe(search => {
-    //     this.setFilteredItems(search);
-    //   });
   }
   goBack() {
     //this.navCtrl.pop();
@@ -32,7 +92,7 @@ export class HomePage {
   }
  
   setFilteredItems(searchTerm) {
-    //this.items = this.dataService.filterItems(searchTerm);
+    //zthis.items = this.dataService.filterItems(searchTerm);
   }
   viewReicpe() {
     // this.navCtrl.push('RecipePage');

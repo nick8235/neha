@@ -6,8 +6,22 @@
     color: brown;
    // margin-top: 20px;
 }
+p {
+    font-size: 0.9em;
+    color: #ea6153;
+  }
+.error-login{
+  margin-left: 15px;
+}
+.error {
+	font-size: 0.9em;
+	color: #ea6153;
+}
+.error-register{
+	margin-left: 15px;
+}
 .ios, .md, .wp {
-	page-register {
+	page-signup {
 		 img{
 		    width: 200px;
 		    height: 200px;
@@ -15,14 +29,14 @@
 		    margin-right:55px;
 		}
 
-		p {
-			font-size: 0.9em;
-			color: #ea6153;
-		}
-		.error-register{
-			margin-left: 15px;
-		}
+		
 	}
 	
-
+	.error {
+		font-size: 0.9em;
+		color: #ea6153;
+	}
+	.error-register{
+		margin-left: 15px;
+	}
 }
