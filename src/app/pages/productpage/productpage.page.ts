@@ -41,7 +41,7 @@ title:" Harry 12 year old highland single mait scotch",
   ngOnInit() {
   }
   loadUser(data){
-    this.service.getData(data).subscribe((res) => {
+    this.service.getUser(data).subscribe((res) => {
       console.log(res);
      
         console.log(res);
